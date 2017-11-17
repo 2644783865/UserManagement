@@ -58,11 +58,11 @@ namespace UserManagement
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+              ClientId = "142077934031-segucq0059l9mta5gj2u4hhh4cugl8t2.apps.googleusercontent.com",
+                 ClientSecret = "xzyPxqYOSPx2Pekfr1PWgSLN"
+            });
         }
     }
 }
