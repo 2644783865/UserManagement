@@ -15,7 +15,7 @@ namespace UserManagement.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Put something else here";
 
             return View();
         }
