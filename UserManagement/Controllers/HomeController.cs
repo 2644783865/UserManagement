@@ -13,18 +13,5 @@ namespace UserManagement.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Put something else here";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
