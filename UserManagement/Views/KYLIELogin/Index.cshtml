@@ -1,0 +1,46 @@
+﻿@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - KYLIE-ERP User Management</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container body-content">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    <h1 class="text-center login-title">Sign in to continue to KYLIE</h1>
+                    <div class="account-wall">
+                        <img class="profile-img" src="https://lh3.googleusercontent.com/-r_zlrZHDJUY/AAAAAAAAAAI/AAAAAAAAAAA/AFiYof1dSNxr9QgCpU3eUa6I7laHl91Gzg/s96-c-mo/photo.jpg"
+                             alt="">
+                        <form class="form-signin">
+                            <input type="text" class="form-control" placeholder="Email Address" required autofocus>
+                            <input type="password" class="form-control" placeholder="Password" required>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                Sign in
+                            </button>
+                            <label class="checkbox pull-left">
+                                <input type="checkbox" value="remember-me">
+                                Remember me
+                            </label>
+                            <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                        </form>
+                    </div>
+                    <a href="#" class="text-center new-account">Create an account </a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+   
+</body>
+</html>
