@@ -1,0 +1,10 @@
+﻿@using UserManagement.Models
+@model SuccessLogin 
+@{
+    Layout = null;
+}
+
+@Html.HiddenFor(model => model.user_email )
+@Html.HiddenFor(model => model.user_password)
+
+<div id=result name=result>OK</div>

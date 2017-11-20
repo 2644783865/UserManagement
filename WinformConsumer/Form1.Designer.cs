@@ -51,6 +51,8 @@
             this.wb.Name = "wb";
             this.wb.Size = new System.Drawing.Size(587, 564);
             this.wb.TabIndex = 1;
+            this.wb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wb_DocumentCompleted);
+            this.wb.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.wb_Navigating);
             // 
             // Form1
             // 

@@ -225,6 +225,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KYLIE.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\User.cs">
       <DependentUpon>KYLIE.tt</DependentUpon>
@@ -305,6 +306,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\KYLIELogin\Index.cshtml" />
+    <Content Include="Views\KYLIELogin\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

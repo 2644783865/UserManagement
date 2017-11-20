@@ -42,26 +42,12 @@ namespace WinformConsumer
             documentCompleteTcs = new TaskCompletionSource<bool>();
             this.wb.DocumentCompleted += handler;
 
-            // could do this.wb.Navigate(url) here 
-            //this.wb.DocumentText = "<!DOCTYPE html><head><meta http-equiv='X-UA-Compatible' content='IE=edge'/></head>" +
-            //    "<body><input size=50 type='text' placeholder='HTML5 if this placeholder is visible'/></body>";
-
-            this.wb.Navigate ("http://localhost:49551/KYLIELogin");
+               this.wb.Navigate ("http://localhost:49551/KYLIELogin");
 
             await documentCompleteTcs.Task;
             this.wb.DocumentCompleted -= handler;
 
-            //dynamic document = this.wb.Document.DomDocument;
-            //dynamic navigator = document.parentWindow.navigator;
-            //var info =
-            //    "\n navigator.userAgent: " + navigator.userAgent +
-            //    "\n navigator.appName: " + navigator.appName +
-            //    "\n document.documentMode: " + document.documentMode +
-            //    "\n document.compatMode: " + document.compatMode;
-
-            //MessageBox.Show(info);
-
-           
+                      
         }
 
         private static void SetBrowserFeatureControl()
@@ -128,6 +114,23 @@ namespace WinformConsumer
             }
 
             return mode;
+        }
+
+        private void wb_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
+         
+        }
+
+        private void wb_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            if (e.Url.ToString().Contains("/Success?")) {
+                System.Windows.Forms.HtmlDocument document = this.wb.Document;
+                //if (document != null && document.All["result"] != null && !String.IsNullOrEmpty(document.All["result"].GetAttribute("value")))
+                //{
+                string em = document.All["user_email"].GetAttribute("value");
+                string pw = document.All["user_password"].GetAttribute("value");
+                //}
+            }
         }
     }
 }
