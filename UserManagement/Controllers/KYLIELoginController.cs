@@ -26,10 +26,17 @@ namespace UserManagement.Controllers
 
         public ActionResult Success(LoginModels login)
         {
-            var results = new SuccessLogin();
-            results.user_email = login.user_email;
-            results.user_password = login.user_password;
-            return View(results);
+            // Originates from WinForms.
+            if (Request.ServerVariables["HTTP_USER_AGENT"].Contains("WOW64"))
+            {
+                var results = new SuccessLogin();
+                results.user_email = login.user_email;
+                results.user_password = login.user_password;
+                return View(results);
+            }
+            else {
+                return View();
+            }
         }
 
     }

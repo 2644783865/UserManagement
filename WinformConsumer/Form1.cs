@@ -125,10 +125,12 @@ namespace WinformConsumer
         {
             if (e.Url.ToString().Contains("/Success?")) {
                 System.Windows.Forms.HtmlDocument document = this.wb.Document;
-                //if (document != null && document.All["result"] != null && !String.IsNullOrEmpty(document.All["result"].GetAttribute("value")))
-                //{
+                
                 string em = document.All["user_email"].GetAttribute("value");
                 string pw = document.All["user_password"].GetAttribute("value");
+                
+                //if (document != null && document.All["result"] != null && !String.IsNullOrEmpty(document.All["result"].GetAttribute("value")))
+                //{
                 //}
             }
         }
