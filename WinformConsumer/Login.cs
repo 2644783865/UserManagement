@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace WinformConsumer
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             SetBrowserFeatureControl();
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace WinformConsumer
             documentCompleteTcs = new TaskCompletionSource<bool>();
             this.wb.DocumentCompleted += handler;
 
-               this.wb.Navigate ("http://localhost:49551/KYLIELogin");
+               this.wb.Navigate ("https://myaccount.google.com");
 
             await documentCompleteTcs.Task;
             this.wb.DocumentCompleted -= handler;

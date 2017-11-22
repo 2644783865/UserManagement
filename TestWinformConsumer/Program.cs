@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinformConsumer
+namespace TestWinformConsumer
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace WinformConsumer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new TestLogin());
         }
     }
 }
