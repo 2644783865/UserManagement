@@ -10,9 +10,9 @@ namespace UserManagement.Controllers
     public class KYLIELoginController : Controller
     {
         // GET: KYLIELogin
-        public ActionResult Index()
+        public ActionResult Index(string user)
         {
-            return View(new LoginModels());
+            return View(new LoginModels() { user_email = user });
         }
 
         [HttpPost]

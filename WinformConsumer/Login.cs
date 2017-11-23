@@ -12,10 +12,13 @@ using System.Windows.Forms;
 
 namespace WinformConsumer
 {
+    
     public partial class Login : Form
     {
-        public Login()
+        private string userName;
+        public Login(string userID)
         {
+            userName = userID;
             SetBrowserFeatureControl();
             InitializeComponent();
         }
@@ -42,7 +45,7 @@ namespace WinformConsumer
             documentCompleteTcs = new TaskCompletionSource<bool>();
             this.wb.DocumentCompleted += handler;
 
-               this.wb.Navigate ("https://myaccount.google.com");
+               this.wb.Navigate (string.Format("https://remote.hutchinsonengineering.co.uk/klogon?user={0}", userName));
 
             await documentCompleteTcs.Task;
             this.wb.DocumentCompleted -= handler;
