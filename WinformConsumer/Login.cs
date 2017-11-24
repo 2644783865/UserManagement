@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace WinformConsumer
 {
     
-    public partial class Login : Form
+    public partial class Login : DevExpress.XtraEditors.XtraForm
     {
         private string userName;
         public Login(string userID)

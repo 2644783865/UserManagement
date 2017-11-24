@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,12 @@ namespace TestWinformConsumer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestLogin());
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.Skins.SkinManager.EnableMdiFormSkins();
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.LookAndFeel.LookAndFeelHelper.ForceDefaultLookAndFeelChanged();
+            DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new Font("Segoe UI", 10);
+            Application.Run(new RibbonLogon());
         }
     }
 }

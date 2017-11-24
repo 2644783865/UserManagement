@@ -52,30 +52,27 @@
             this.wb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wb.Location = new System.Drawing.Point(0, 46);
+            this.wb.Location = new System.Drawing.Point(0, 37);
             this.wb.MinimumSize = new System.Drawing.Size(20, 20);
             this.wb.Name = "wb";
-            this.wb.Size = new System.Drawing.Size(457, 578);
+            this.wb.Size = new System.Drawing.Size(457, 587);
             this.wb.TabIndex = 1;
             this.wb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wb_DocumentCompleted);
             this.wb.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.wb_Navigating);
             // 
             // panelHeader
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.White;
-            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHeader.Controls.Add(this.headerLabel);
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(519, 45);
+            this.panelHeader.Size = new System.Drawing.Size(457, 45);
             this.panelHeader.TabIndex = 2;
             // 
             // headerLabel
             // 
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.headerLabel.Location = new System.Drawing.Point(3, 8);
+            this.headerLabel.Location = new System.Drawing.Point(12, 9);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(244, 25);
             this.headerLabel.TabIndex = 0;
