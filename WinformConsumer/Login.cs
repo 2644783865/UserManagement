@@ -16,11 +16,18 @@ namespace WinformConsumer
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
         private string userName;
+        Models.LoginModels.ValidUser vu;
         public Login(string userID)
         {
             userName = userID;
             SetBrowserFeatureControl();
             InitializeComponent();
+        }
+
+        public Models.LoginModels.ValidUser ShowLogonDialog()
+        {
+            base.ShowDialog();
+            return vu;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -131,10 +138,13 @@ namespace WinformConsumer
                 
                 string em = document.All["user_email"].GetAttribute("value");
                 string pw = document.All["user_password"].GetAttribute("value");
-                
-                //if (document != null && document.All["result"] != null && !String.IsNullOrEmpty(document.All["result"].GetAttribute("value")))
-                //{
-                //}
+
+                vu = new Models.LoginModels.ValidUser();
+                vu.LoginUserName = em;
+                vu.LoginUserPassword = pw;
+
+                this.Close();
+
             }
         }
     }
