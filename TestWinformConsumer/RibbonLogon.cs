@@ -24,7 +24,7 @@ namespace TestWinformConsumer
             Models.LoginViewModels.ValidUser vu = new Models.LoginViewModels.ValidUser();
             // somehow you need to pass me something back from WinformConsumer.Login, so that I can cast it to vu, above;
             WinformConsumer.Login loginForm = new WinformConsumer.Login("stuart@hutchinsonengineering.co.uk");
-            loginForm.Show();
+            loginForm.ShowDialog();
         }
 
         private void RibbonForm1_Shown(object sender, EventArgs e)
